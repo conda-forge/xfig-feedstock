@@ -12,14 +12,15 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
   build:
-    - toolchain
-    - libpng >=1.6.28,<1.7
-    - jpeg 9*
+    - {{ compiler('c') }}
+  host:
+    - libpng
+    - jpeg
     - ghostscript
     - xorg-libx11
     - xorg-libxaw3d
@@ -27,8 +28,8 @@ requirements:
     - xorg-libxmu
     - xorg-libxt
   run:
-    - libpng >=1.6.28,<1.7
-    - jpeg 9*
+    - libpng
+    - jpeg
     - ghostscript
     - xorg-libx11
     - xorg-libxaw3d
