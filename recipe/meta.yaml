@@ -1,6 +1,6 @@
 {% set name = "xfig" %}
-{% set version = "3.2.6a" %}
-{% set sha256 = "a87aeb5d424aadb84ede137291bbe8649551209a807c94f0956fc323b819267c" %}
+{% set version = "3.2.7a" %}
+{% set sha256 = "ca89986fc9ddb9f3c5a4f6f70e5423f98e2f33f5528a9d577fb05bbcc07ddf24" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1001
+  number: 0
   skip: True  # [win]
 
 requirements:
