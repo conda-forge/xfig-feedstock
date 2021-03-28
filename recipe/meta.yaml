@@ -1,6 +1,6 @@
 {% set name = "xfig" %}
-{% set version = "3.2.6a" %}
-{% set sha256 = "a87aeb5d424aadb84ede137291bbe8649551209a807c94f0956fc323b819267c" %}
+{% set version = "3.2.8a" %}
+{% set sha256 = "ba43c0ea85b230d3efa5a951a3239e206d0b033d044c590a56208f875f888578" %}
 
 package:
   name: {{ name|lower }}
@@ -12,8 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1001
-  skip: True  # [win]
+  number: 0
+  skip: true  # [win]
 
 requirements:
   build:
@@ -39,14 +39,12 @@ requirements:
 
 test:
   commands:
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
     - xfig -v
 
 about:
   home: http://mcj.sourceforge.net
   license: freeware
-  summary: 'vector drawing tool'
+  summary: vector drawing tool
 
   description: |
     Xfig is an interactive drawing tool which runs under X Window System
