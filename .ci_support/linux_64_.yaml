@@ -1,7 +1,7 @@
 c_compiler:
 - gcc
 c_compiler_version:
-- '11'
+- '12'
 cdt_name:
 - cos6
 channel_sources:
@@ -16,3 +16,5 @@ libpng:
 - '1.6'
 target_platform:
 - linux-64
+zlib:
+- '1.2'
